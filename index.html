@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+<!-- This puts an emoji or icon in your browser tab! -->
+<link rel="icon" href="https://fav.farm/🕵🏽">
+     <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAB!'s Portfolio 2026</title>
+<style>
+/* 1. GLOBAL RESET — MUST BE FIRST */
+* {
+	  margin: 0;
+	    padding: 0;
+	      box-sizing: border-box;
+	      }
+  /* This targets the body element */
+	html, body {
+		  min-height: 100%;
+		  }
+    body {
+    padding-top: 90px;
+    margin: 0;
+    	    background: linear-gradient(135deg, #FF8C00, #8B0000); /* Light Gray */
+    	     font-family: 'Montserrat', sans-serif;   /* Clean modern text */
+			color: #fffaf5;
+    	            text-align: center;        /* Moves everything to the middle */
+		display: block;
+		  flex-direction: column;
+		    align-items: center;
+    	        }
+	                /* This targets your image */
+          .profile-pic {
+          	  border-radius: 50%;
+          	    border: 4px solid #C49A7F;     /* keeps your current look */
+          	      box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+          	        object-fit: cover;
+          	          transition: transform 0.5s ease, box-shadow 0.3s ease;
+          	            cursor: pointer;
+          	            }
+
+          	            .profile-pic:hover {
+          	            	  transform: scale(1.08);
+          	            	    box-shadow: 0 0 25px rgba(239, 121, 0, 0.6);
+          	            	    }
+
+          	            	    .profile-pic:active {
+          	            	    	  transform: scale(0.95);
+          	            	    	    box-shadow: 0 0 15px rgba(239, 121, 0, 0.9);
+          }
+   .profile-card {
+    	width: 90%;
+   	    background-color: #D9B99B;  /* The box will be white */
+   	        color: #2E1E1E;              /* The text inside will be dark */
+   	            max-width: 600px;         /* It won't be too wide */
+   	                margin: 40px auto;        /* This CENTERS the whole box! */
+   	                    padding: 30px;            /* Gives space inside the box */
+   	                        border-radius: 20px;      /* Rounded corners for the box */
+   	                            box-shadow: 0px 10px 30px rgba(0,0,0,0.5); /* Makes it float! */
+   	              }
+   .profile-card h1,
+   .profile-card h2,
+   .profile-card p {
+   	  margin: 15px 0;
+   	  }
+
+   	  .profile-card ul {
+   	  	  margin: 15px 0;
+   	  	    padding-left: 20px;
+   	  	    }
+
+   	  	    .profile-card li {
+   	  	    	  margin: 8px 0;
+   	  	    	  }
+
+   	  	    	  .profile-card hr {
+   	  	    	  	  margin: 30px 0;
+   	  	    	  	  }
+   	   /* This makes your links look like real buttons */
+   	   a {
+   	   	    display: block;
+   	   	        background-color: #FF8C00;
+   	   	            color: #fffaf5;
+   	   	                padding: 15px;
+   	   	                    margin: 15px 0;
+   	   	                        text-decoration: none;
+   	   	                            border-radius: 50px; /* Makes them rounded and sleek */
+   	   	     font-weight: bold;
+       transition: 0.5s;    /* This makes the hover smooth! */
+   	   	                                    }
+   	   	                                    /* This is the magic! It reacts when you touch it */
+   	   	      a:hover {
+   	   	       	    background-color: #e06700;
+   	   	     transform: translateY(-3px); /* Makes it pop up slightly! */
+   	   	     box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+   	   	                             }
+   	   .contact-list {
+   	   	  list-style: none;
+   	   	    padding: 0;
+   	   	      margin: 0;
+   	   	      }
+
+   	   	      .contact-list li {
+   	   	      	  list-style: none;
+   	   	      	  }
+  .top-nav {
+  	    position: fixed;        /* MAGIC: This makes it stay at the top! */
+  	        top: 0;
+  	            left: 0;
+  	                width: 100%;
+  	      justify-content: space-between;   /* far left + far right */
+  	                    background-color: #654321;
+  	                        color: white;
+  	                            padding: 15px 0;
+  	                                font-weight: bold;
+  	                                    display: flex;
+  	                                            align-items: center;
+  	                                                z-index: 1000;          /* Ensures it stays on top of everything */
+                    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+                    padding: 15px 10px 15px 15px;   /* more space on the sides */
+  	                                                    }
+  	               .nav-left {
+  	               	  margin-left: 15px;
+  	               	  }
+  	               	  .status-dot {
+  	               	  	  margin-right: 15px;
+  	               	  }
+  	                                  .status-dot {
+  	               	    background: #28A745;    /* Green color */
+  	               	        border: none;
+  	                 color: white;
+  	  	                padding: 5px 10px;
+                   border-radius: 20px;
+  	           font-size: 0.8rem;
+  	                        animation: blink 1.5s infinite; /* Bonus: Making it blink! */
+  	}
+          	            @keyframes blink {
+  	                       	    0% { opacity: 1; }
+  	                     50% { opacity: 0.5; }
+  	                      100% { opacity: 1; }
+  	                      }
+ /* 1. Styling the Stats Bar */
+ .stats-container {
+ 	    display: flex;
+ 	        justify-content: space-around;
+ 	            background: #f8f9fa;
+ 	                padding: 15px;
+ 	                    border-radius: 15px;
+ 	                        margin: 20px 0;
+ 	                        }
+
+ 	                        .stat {
+ 	                        	    display: flex;
+ 	                        	        flex-direction: column;
+ 	                        	        }
+
+ 	                        	        .stat strong {
+ 	                        	        	    font-size: 1.2rem;
+ 	                        	        	        color: #2E1E1E;
+ 	                        	        	        }
+
+ 	                        	        	        .stat span {
+ 	                        	    font-size: 0.7rem;
+ 	               	        	        text-transform: uppercase;
+ 	               	        	            color: #2E1E1E;
+ 	                        	        	        	            }
+
+ 	                        	        	        	            /* 2. THE MOBILE MAGIC (Media Query) */
+ 	                        	        	        	            @media (max-width: 480px) {
+ 	                        	        	        	            	    .profile-card {
+ 	                        	        	  width: 95%;      /* Takes up more space on small phones */
+ 	                       	    	                padding: 20px;   /* Shrinks padding so text doesn't choke */
+ 	                         	                    }
+ 	       h1 { font-size: 1.5rem; } /* Makes name fit on one line */
+hr {
+	  width: 100%;
+	    max-width: 400px;
+	      margin: 30px auto;
+	        border: none;
+	          height: 1px;
+	            background: rgba(46, 30, 30, 0.3);
+	            }
+ </style>
+ </head>
+
+ <body>
+<header class="top-nav">
+  <span>FAB's Portfolio 2026</span>
+    <button class="status-dot">Online</button>
+    </header>
+ <h1>My Web Dev Journey</h1>
+  <div class="profile-card">
+       <!-- All your name, image, and bio code stays here -->
+<p>I am learning Front-End Development with @feranmi.</p>
+<!-- 1. Profile Picture (The "Eyes") -->
+<img class="profile-pic" src="fab.png" width="100" height="100" alt="My Profile Picture">
+<h1>FAB!™</h1>
+<p>Aspiring Front-End Developer</p>
+<h2>About Me</h2>
+<p>
+  Front-End Developer in <i>training</i>. 
+  I build clean, responsive websites and enjoy learning new technologies. 
+  I’m passionate about design, Web3, and digital growth.
+</p>
+<div class="stats-container">
+  <div class="stat">
+      <strong>3</strong>
+          <span>Days</span>
+            </div>
+              <div class="stat">
+                  <strong>12</strong>
+                      <span>Projects</span>
+                        </div>
+                          <div class="stat">
+                              <strong>100%</strong>
+       <span>Focus</span>
+     </div>
+  </div>
+<!-- 2. Main Heading -->
+<hr> <!-- This creates a thin horizontal line -->
+
+<!-- 3. Skills Section (The "Bones") -->
+<h2>My Tech Skills</h2>
+<ul>
+<li>HTML5 Semantics</li>
+<li>Terminal Commands (Termux)</li>
+<li>Folder Management</li>
+</ul>
+<!-- 4. Contact Section (The "Path") -->
+<hr> 
+<h2>Connect With Me</h2>
+<p>I'm always open to discussing new projects and tech opportunities:</p>
+<ul class="contact-list">
+  <li>
+<!-- My Personal Email -->
+<a href="mailto:kryptically.fab@gmail.com">📧 Email</a>
+</li>
+<li>
+<!-- My GitHub (Notice target="_blank" so it opens a new tab!) -->
+<a href="https://github.com/TYXC01" target="_blank">💻 GitHub </a>
+</li>
+ <li>
+  <!-- My X/Socials -->
+<a href="https://x.com/kryptically_fab">🐦 Follow</a>
+    </li>
+            <li>
+        <a href="https://wa.me/2348111761104">📱 WhatsApp</a>
+        </ul>
+        </li>
+        </div>
+  </body>    
+</html>
